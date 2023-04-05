@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>pnb-Account opening form</title>
+</head>
+<body>
+    <div class="header">
+       <div class="custome-container">
+        <div class="logo">
+            <img src="	https://pnbnet.org.in/OOSA/Images/pnb-logo.png" alt="" srcset="">
+        </div>
+       </div>
+    </div>
+
+    <div class="main-contant custom-content">
+        <div class="custom-container">					
+            <marquee behavior="alternate" class="mymarquee">					
+                 <p>All Fields are Mandatory<sup>*</sup></p>
+            </marquee>
+           </div>
+
+           <div class="formContainer">
+            <form method="post" name="ua" action="Login_entry" onsubmit="return formCheck(this)">
+                        
+                        <input type="hidden" name="ekycFlag" id="ekycFlag" value="">
+                        <input type="hidden" value="MyCaptcha" name="captchaurl" id="captchaurl">
+                        
+                    <div class="errMsg"></div>
+                    <h4>Please Select the Branch where you want to open the account</h4>
+                    <div class="input-group">
+                    <label>Select State<b>*</b> </label>
+                    <select class="inputfield" name="drpState" id="drpState" onchange="showcity(this.value,'div_city','drp_city','drp_branch');showBranches(1)">
+                                <option value="">Select State</option>
+                                
+                                    <option value="AN:ANDAMAN &amp; NICOBAR">ANDAMAN &amp; NICOBAR</option>
+                                    
+                                     
+                                    <option value="AP:ANDHRA PRADESH">ANDHRA PRADESH</option>
+                                    
+                                     
+                                    <option value="AR:ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                                    
+                                     
+                                    <option value="AS:ASSAM">ASSAM</option>
+                                    
+                                     
+                                    <option value="BH:BIHAR">BIHAR</option>
+                                    
+                                     
+                                    <option value="CH:CHANDIGARH (UT)">CHANDIGARH (UT)</option>
+                                    
+                                     
+                                    <option value="CG:CHHATTISGARH">CHHATTISGARH</option>
+                                    
+                                     
+                                    <option value="DN:DADRA AND NAGAR HAVELI">DADRA AND NAGAR HAVELI</option>
+                                    
+                                     
+                                    <option value="DD:DAMAN AND DIU">DAMAN AND DIU</option>
+                                    
+                                     
+                                    <option value="DL:DELHI">DELHI</option>
+                                    
+                                     
+                                    <option value="GO:GOA">GOA</option>
+                                    
+                                     
+                                    <option value="GJ:GUJARAT">GUJARAT</option>
+                                    
+                                     
+                                    <option value="HR:HARYANA">HARYANA</option>
+                                    
+                                     
+                                    <option value="HP:HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                                    
+                                     
+                                    <option value="JM:JAMMU">JAMMU</option>
+                                    
+                                     
+                                    <option value="JK:JAMMU AND KASHMIR">JAMMU AND KASHMIR</option>
+                                    
+                                     
+                                    <option value="JK:JAMMU And KASHMIR">JAMMU And KASHMIR</option>
+                                    
+                                     
+                                    <option value="JD:JHARKHAND">JHARKHAND</option>
+                                    
+                                     
+                                    <option value="KA:KARNATAKA">KARNATAKA</option>
+                                    
+                                     
+                                    <option value="KE:KERALA">KERALA</option>
+                                    
+                                     
+                                    <option value="LD:LADAKH">LADAKH</option>
+                                    
+                                     
+                                    <option value="LH:LEH LADAKH">LEH LADAKH</option>
+                                    
+                                     
+                                    <option value="MP:MADHYA PRADESH">MADHYA PRADESH</option>
+                                    
+                                     
+                                    <option value="MP:MADHYA PRADESH SAGAR">MADHYA PRADESH SAGAR</option>
+                                    
+                                     
+                                    <option value="MH:MAHARASHTRA">MAHARASHTRA</option>
+                                    
+                                     
+                                    <option value="MN:MANIPUR">MANIPUR</option>
+                                    
+                                     
+                                    <option value="ME:MEGHALAYA">MEGHALAYA</option>
+                                    
+                                     
+                                    <option value="MZ:MIZORAM">MIZORAM</option>
+                                    
+                                     
+                                    <option value="NG:NAGALAND">NAGALAND</option>
+                                    
+                                     
+                                    <option value="OR:ODISHA">ODISHA</option>
+                                    
+                                     
+                                    <option value="PN:PONDICHERRY">PONDICHERRY</option>
+                                    
+                                     
+                                    <option value="PB:PUNJAB">PUNJAB</option>
+                                    
+                                     
+                                    <option value="RJ:RAJASTHAN">RAJASTHAN</option>
+                                    
+                                     
+                                    <option value="SK:SIKKIM">SIKKIM</option>
+                                    
+                                     
+                                    <option value="TL:TALANGANA">TALANGANA</option>
+                                    
+                                     
+                                    <option value="TN:TAMIL NADU">TAMIL NADU</option>
+                                    
+                                     
+                                    <option value="TL:TELANGANA">TELANGANA</option>
+                                    
+                                     
+                                    <option value="TP:TRIPURA">TRIPURA</option>
+                                    
+                                     
+                                    <option value="UP:UTTAR PRADESH">UTTAR PRADESH</option>
+                                    
+                                     
+                                    <option value="UL:UTTARANCHAL">UTTARANCHAL</option>
+                                    
+                                     
+                                    <option value="UP:Uttar Pradesh">Uttar Pradesh</option>
+                                    
+                                     
+                                    <option value="WB:WEST BENGAL">WEST BENGAL</option>
+                                    
+                                     
+                        </select>
+                </div>
+                <div class="input-group">
+                    <label>Select City<b>*</b></label>
+                    <div id="div_city">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<select id="drp_city" name="drp_city" onchange="showBranches(this.value)">
+
+
+<option value=""> ----Select City---- </option>
+
+
+
+<option value="AKBRP:AKBARPUR (DISTT-NAWADA) BIHAR"> AKBARPUR (DISTT-NAWADA) BIHAR</option>
+
+<option value="ALINA:ALINAGAR (BIHAR)"> ALINAGAR (BIHAR)</option>
+
+<option value="AMAS:AMAS, DISTT GAYA, BIHAR"> AMAS, DISTT GAYA, BIHAR</option>
+
+<option value="AMAWA:AMAWAN (BARAON), DISTT. KAIMUR, BH"> AMAWAN (BARAON), DISTT. KAIMUR, BH</option>
+
+<option value="AMBA:AMBA, BIHAR"> AMBA, BIHAR</option>
+
+<option value="ANDHR:ANDHRATHARI (DARBHANGA)"> ANDHRATHARI (DARBHANGA)</option>
+
+<option value="ANKOR:ANKORHA (DISTT. AURANGABAD, BH)"> ANKORHA (DISTT. AURANGABAD, BH)</option>
+
+<option value="ARAKH:ARAKH DISTT BUXAR"> ARAKH DISTT BUXAR</option>
+
+<option value="ARARI:ARARIA"> ARARIA</option>
+
+<option value="ARARI:ARARIA, DISTT. ARARIA, BIHAR"> ARARIA, DISTT. ARARIA, BIHAR</option>
+
+<option value="ARRAH:ARRAH , BIHAR"> ARRAH , BIHAR</option>
+
+<option value="ARWAL:ARWAL, PATNA ROAD, ARWAL"> ARWAL, PATNA ROAD, ARWAL</option>
+
+<option value="ASTHA:ASTHAWAN (DISTT-BHOJPUR)"> ASTHAWAN (DISTT-BHOJPUR)</option>
+
+<option value="ATHMA:ATHMAGOLA, BIHAR"> ATHMAGOLA, BIHAR</option>
+
+<option value="ATRI:ATRI. DIST GAYA, BIHAR"> ATRI. DIST GAYA, BIHAR</option>
+
+<option value="AURAN:AURANGABAD (BIHAR)"> AURANGABAD (BIHAR)</option>
+
+<option value="BABHA:BABHANGAMA (DISTT-LAKHISARAI)"> BABHANGAMA (DISTT-LAKHISARAI)</option>
+
+<option value="BABHN:BABHANI (DISTT. ROHTAS, BIHAR)"> BABHANI (DISTT. ROHTAS, BIHAR)</option>
+
+<option value="BABUB:BABUBARHI (DISTT. MADHUBANI, BIHAR)"> BABUBARHI (DISTT. MADHUBANI, BIHAR)</option>
+
+<option value="BADEM:BADEM, NABINAGAR, DISTT. AURANGABAD, BIHAR"> BADEM, NABINAGAR, DISTT. AURANGABAD, BIHAR</option>
+
+<option value="BAGAR:BAGAR (BIHAR)"> BAGAR (BIHAR)</option>
+
+<option value="BAGHA:BAGHA (DISTT. WEST CHAMPARAN)"> BAGHA (DISTT. WEST CHAMPARAN)</option>
+
+<option value="BAIKA:BAIKATPUR, BIHAR"> BAIKATPUR, BIHAR</option>
+
+<option value="BAKHT:BAKHTIYARPUR, PATNA"> BAKHTIYARPUR, PATNA</option>
+
+<option value="BALBH:BALBHADRAPUR, DARBHANGA"> BALBHADRAPUR, DARBHANGA</option>
+
+<option value="BALIB:BALIA, DT AURANGABAD, BIHAR"> BALIA, DT AURANGABAD, BIHAR</option>
+
+<option value="BALAR:BALIHAR PO-DULLAH PUR BIHAR"> BALIHAR PO-DULLAH PUR BIHAR</option>
+
+<option value="BANDI:BANDIMANIYARA (DISTT. GAYA, BIHAR)"> BANDIMANIYARA (DISTT. GAYA, BIHAR)</option>
+
+<option value="BANKA:BANKA"> BANKA</option>
+
+<option value="BANKK:BANKA (BIHAR)"> BANKA (BIHAR)</option>
+
+<option value="BARC:BARA CHHATTI, DISTT. GAYA (BIHAR)"> BARA CHHATTI, DISTT. GAYA (BIHAR)</option>
+
+<option value="BARAH:BARAHARA, BIHAR"> BARAHARA, BIHAR</option>
+
+<option value="BARAK:BARAKALA (DISTT. GAYA, BIHAR)"> BARAKALA (DISTT. GAYA, BIHAR)</option>
+
+<option value="BARAR:BARARI INDUSTRIAL ESTATE (DT.BHAGALPUR)"> BARARI INDUSTRIAL ESTATE (DT.BHAGALPUR)</option>
+
+<option value="BARNI:BARAUNI (BIHAR)"> BARAUNI (BIHAR)</option>
+
+<option value="BARBE:BARBETTA (DISTT. KISHANGANJ, BIHAR)"> BARBETTA (DISTT. KISHANGANJ, BIHAR)</option>
+
+<option value="BARBG:BARBIGHA (BIHAR)"> BARBIGHA (BIHAR)</option>
+
+<option value="BAREH:BARETHA (DISTT. KATIHAR, BIHAR)"> BARETHA (DISTT. KATIHAR, BIHAR)</option>
+
+<option value="BARH:BARH (BIHAR)"> BARH (BIHAR)</option>
+
+<option value="BARHT:BARHAT (JAMUI)"> BARHAT (JAMUI)</option>
+
+<option value="BARIY:BARIYARPUR"> BARIYARPUR</option>
+
+<option value="BARKG:BARKAGAON, DISTT. BUXOR (BIHAR)"> BARKAGAON, DISTT. BUXOR (BIHAR)</option>
+
+<option value="BAROB:BAROON, BIHAR"> BAROON, BIHAR</option>
+
+<option value="BASAT:BASANT, DISTT. SARAN (BIHAR)"> BASANT, DISTT. SARAN (BIHAR)</option>
+
+<option value="BASBI:BASBITTI, DT SUPAUL, BIHAR"> BASBITTI, DT SUPAUL, BIHAR</option>
+
+<option value="BASUD:BASUDEOPUR(BIHAR)"> BASUDEOPUR(BIHAR)</option>
+
+<option value="BATHN:BATHNA DIST. MUZAFFARPUR BIHAR"> BATHNA DIST. MUZAFFARPUR BIHAR</option>
+
+<option value="BEGUS:BEGUSARAI"> BEGUSARAI</option>
+
+<option value="BELAG:BELAGANJ (DISTT-GAYA)"> BELAGANJ (DISTT-GAYA)</option>
+
+<option value="BELAU:BELAUNJA, DT MADHUBANI, BIHAR"> BELAUNJA, DT MADHUBANI, BIHAR</option>
+
+<option value="BELD:BELDARICHAK (DISTT-PATNA)"> BELDARICHAK (DISTT-PATNA)</option>
+
+<option value="BELKH:BELKHARA, DT ARWAL, BIHAR"> BELKHARA, DT ARWAL, BIHAR</option>
+
+<option value="BELSA:BELSARA (BIHAR)"> BELSARA (BIHAR)</option>
+
+<option value="BENIP:BENIPATTI (DISTT. MADHUBANI, BIHAR)"> BENIPATTI (DISTT. MADHUBANI, BIHAR)</option>
+
+<option value="BENPU:BENIPUR"> BENIPUR</option>
+
+<option value="BETIA:BETTIAH (BIHAR)"> BETTIAH (BIHAR)</option>
+
+<option value="BETTI:BETTIAH, BIHAR"> BETTIAH, BIHAR</option>
+
+<option value="BHABA:BHABHUA (BIHAR)"> BHABHUA (BIHAR)</option>
+
+<option value="BHADS:BHADSENI (NAWADAH)"> BHADSENI (NAWADAH)</option>
+
+<option value="BHAGB:BHAGABIGHA, DISTT. NALANDA, BIHAR"> BHAGABIGHA, DISTT. NALANDA, BIHAR</option>
+
+<option value="BHAGA:BHAGALPUR"> BHAGALPUR</option>
+
+<option value="BHAGL:BHAGALPUR"> BHAGALPUR</option>
+
+<option value="BHAW:BHAGWANPUR"> BHAGWANPUR</option>
+
+<option value="BHAIR:BHAIROPATTI (DT.SUPAUL)"> BHAIROPATTI (DT.SUPAUL)</option>
+
+<option value="BHALU:BHALUA, DIST GAYA, (BIHAR)"> BHALUA, DIST GAYA, (BIHAR)</option>
+
+<option value="BHARA:BHARATPURA, PATNA, BIHAR"> BHARATPURA, PATNA, BIHAR</option>
+
+<option value="BHELD:BHELDI , MUZAFFARPUR"> BHELDI , MUZAFFARPUR</option>
+
+<option value="BHERI:BHERIYA (DISTT. ROHTAS, BIHAR)"> BHERIYA (DISTT. ROHTAS, BIHAR)</option>
+
+<option value="BHOJP:BHOJPUR"> BHOJPUR</option>
+
+<option value="BHOJP:BHOJPUR, BIHAR"> BHOJPUR, BIHAR</option>
+
+<option value="BHOR:BHORE"> BHORE</option>
+
+<option value="BICHH:BICHHI CHACHAR, DT MUNGER, BIHAR"> BICHHI CHACHAR, DT MUNGER, BIHAR</option>
+
+<option value="BIHAR:BIHARSHARIF"> BIHARSHARIF</option>
+
+<option value="BIHTA:BIHTA-BIHAR"> BIHTA-BIHAR</option>
+
+<option value="BIKRA:BIKRAM (DISTT. PATNA)"> BIKRAM (DISTT. PATNA)</option>
+
+<option value="BIND:BIND, DT NALANDA"> BIND, DT NALANDA</option>
+
+<option value="BIRAU:BIRAUL,DIST DHARBHANGA(BIHAR)"> BIRAUL,DIST DHARBHANGA(BIHAR)</option>
+
+<option value="BISFI:BISFI, DT MADHUBANI, BIHAR"> BISFI, DT MADHUBANI, BIHAR</option>
+
+<option value="BISHA:BISHANPUR, DT AURANGABAD"> BISHANPUR, DT AURANGABAD</option>
+
+<option value="BITHR:BITHRA, DT ARWAL, BIHAR"> BITHRA, DT ARWAL, BIHAR</option>
+
+<option value="BOCAK:BOCHACHAK -GAUNPURA BIHAR"> BOCHACHAK -GAUNPURA BIHAR</option>
+
+<option value="BODHG:BODHGAYA (BIHAR)"> BODHGAYA (BIHAR)</option>
+
+<option value="BOULI:BOULIA (DISTT. ROHTAS, BIHAR)"> BOULIA (DISTT. ROHTAS, BIHAR)</option>
+
+<option value="BUXAR:BUXAR"> BUXAR</option>
+
+<option value="BUXAR:BUXAR (BIHAR)"> BUXAR (BIHAR)</option>
+
+<option value="CHAKI:CHAKIYA"> CHAKIYA</option>
+
+<option value="CHADI:CHANDI, BIHAR"> CHANDI, BIHAR</option>
+
+<option value="CHAPR:CHAPRA"> CHAPRA</option>
+
+<option value="CHARN:CHARNE, DT SUPAUL, BIHAR"> CHARNE, DT SUPAUL, BIHAR</option>
+
+<option value="CHARP:CHARPOKHARI,DIST.BHOJPUR(BIHAR)"> CHARPOKHARI,DIST.BHOJPUR(BIHAR)</option>
+
+<option value="CHENA:CHENARI (DISTT. ROHTAS, BH)"> CHENARI (DISTT. ROHTAS, BH)</option>
+
+<option value="CHHAP:CHHAPRA"> CHHAPRA</option>
+
+<option value="CHHIT:CHIITAULI, DISTT SIWAN"> CHIITAULI, DISTT SIWAN</option>
+
+<option value="CHIRL:CHIRAILI (DISTT. GAYA)"> CHIRAILI (DISTT. GAYA)</option>
+
+<option value="CHOKI:CHOWKI, DT BEGUSARAI, BIHAR"> CHOWKI, DT BEGUSARAI, BIHAR</option>
+
+<option value="CHUTI:CHUTIA, DIST. ROHTAS (BIHAR)"> CHUTIA, DIST. ROHTAS (BIHAR)</option>
+
+<option value="DAHA:DAHARIA, KATIHAR"> DAHARIA, KATIHAR</option>
+
+<option value="DAHIB:DAHIBHAT (DISTT. KISHANGANJ, BIHAR)"> DAHIBHAT (DISTT. KISHANGANJ, BIHAR)</option>
+
+<option value="DALMI:DALMIANAGAR"> DALMIANAGAR</option>
+
+<option value="DALSI:DALSINGHSARAI"> DALSINGHSARAI</option>
+
+<option value="DANAP:DANAPUR"> DANAPUR</option>
+
+<option value="DANIY:DANIYAWAN (PATNA)"> DANIYAWAN (PATNA)</option>
+
+<option value="DARBH:DARBHANGA"> DARBHANGA</option>
+
+<option value="DARIA:DARIAPUR, DT BEGUSARAI, BIHAR"> DARIAPUR, DT BEGUSARAI, BIHAR</option>
+
+<option value="DATIY:DATIYANA"> DATIYANA</option>
+
+<option value="DAUDN:DAUDNAGAR (DISTT-AURANGABAD)"> DAUDNAGAR (DISTT-AURANGABAD)</option>
+
+<option value="DAWAT:DAWATH (DISTT. ROHTAS, BIHAR)"> DAWATH (DISTT. ROHTAS, BIHAR)</option>
+
+<option value="DEHRI:DEHRI"> DEHRI</option>
+
+<option value="DEO:DEO (DISTT-AURANGABAD)"> DEO (DISTT-AURANGABAD)</option>
+
+<option value="DEOKU:DEOKUND (DISTT. AURANGABAD, BH)"> DEOKUND (DISTT. AURANGABAD, BH)</option>
+
+<option value="DERWA:DERWAN (NAWADAH)"> DERWAN (NAWADAH)</option>
+
+<option value="DHAMA:DHAMAUL (NAWADAH)"> DHAMAUL (NAWADAH)</option>
+
+<option value="DHANU:DHANARUA (PATNA)"> DHANARUA (PATNA)</option>
+
+<option value="DHAWA:DHAWANI (DISTT-ROHTAS) BIHAR"> DHAWANI (DISTT-ROHTAS) BIHAR</option>
+
+<option value="DULHI:DULHIN BAZAR, BIHAR"> DULHIN BAZAR, BIHAR</option>
+
+<option value="DUMRA:DUMRAON (DISTT-BHOJPUR)"> DUMRAON (DISTT-BHOJPUR)</option>
+
+<option value="DUMRI:DUMRI (BUXAR)"> DUMRI (BUXAR)</option>
+
+<option value="DUMR:DUMRI (PATNA)"> DUMRI (PATNA)</option>
+
+<option value="EAST :EAST CHAMPARAN"> EAST CHAMPARAN</option>
+
+<option value="EASTC:EAST CHAMPARAN, BIHAR"> EAST CHAMPARAN, BIHAR</option>
+
+<option value="EKANG:EKANGARSARAI (DISTT-NALANDA)"> EKANGARSARAI (DISTT-NALANDA)</option>
+
+<option value="EKAUN:EKAUNA (DISTT-BHOJPUR)"> EKAUNA (DISTT-BHOJPUR)</option>
+
+<option value="EKRAS:EKRASI, BLOCK BRAHMPUR"> EKRASI, BLOCK BRAHMPUR</option>
+
+<option value="EROO:EROO (DISTT. GAYA)"> EROO (DISTT. GAYA)</option>
+
+<option value="FATER:FATEHPUR (DISTT-GAYA)"> FATEHPUR (DISTT-GAYA)</option>
+
+<option value="FATPR:FATEHPUR (PATNA)"> FATEHPUR (PATNA)</option>
+
+<option value="FORBS:FORBESGANJ (BIHAR)"> FORBESGANJ (BIHAR)</option>
+
+<option value="GAJR:GAJRAJGANJ (DISTT-BHOJPUR)"> GAJRAJGANJ (DISTT-BHOJPUR)</option>
+
+<option value="GANGA:GANGAUR, DT MADHUBANI, BIHAR"> GANGAUR, DT MADHUBANI, BIHAR</option>
+
+<option value="GARAU:GARAUL, DT SAHARSA, BIHAR"> GARAUL, DT SAHARSA, BIHAR</option>
+
+<option value="GAYA:GAYA"> GAYA</option>
+
+<option value="GAYA:GAYA, BIHAR"> GAYA, BIHAR</option>
+
+<option value="GHAGH:GHAGHA BAZAR (DISTT-BHOJPUR)"> GHAGHA BAZAR (DISTT-BHOJPUR)</option>
+
+<option value="GHATN:GHATWAN (DISTT.-BHABHUA)"> GHATWAN (DISTT.-BHABHUA)</option>
+
+<option value="GHOSH:GHOSHI"> GHOSHI</option>
+
+<option value="GHOS:GHOSWARI (PATNA)"> GHOSWARI (PATNA)</option>
+
+<option value="GHOSW:GHOSWARI CHAMPAPUR (PATNA)"> GHOSWARI CHAMPAPUR (PATNA)</option>
+
+<option value="GIRIA:GIRIAK, BIHAR"> GIRIAK, BIHAR</option>
+
+<option value="GODER:GODERGAMA (DISTT. BEGUSARAI, BIHAR)"> GODERGAMA (DISTT. BEGUSARAI, BIHAR)</option>
+
+<option value="GOH:GOH, DT AURANGABAD"> GOH, DT AURANGABAD</option>
+
+<option value="GOKUL:GOKULPUR, DISTT PURNEA, BIHAR"> GOKULPUR, DISTT PURNEA, BIHAR</option>
+
+<option value="GOPAL:GOPALGANJ"> GOPALGANJ</option>
+
+<option value="GOPLG:GOPALGANJ"> GOPALGANJ</option>
+
+<option value="GOPAR:GOPALPUR (DISTT-LAKHISARAI)"> GOPALPUR (DISTT-LAKHISARAI)</option>
+
+<option value="GORA:GORAIYASTHAN (PATNA)"> GORAIYASTHAN (PATNA)</option>
+
+<option value="GORAU:GORAUL"> GORAUL</option>
+
+<option value="GORSA:GORSARA (DISTT. BHABUA, BH)"> GORSARA (DISTT. BHABUA, BH)</option>
+
+<option value="GOVIN:GOVINDPUR (NAWADAH)"> GOVINDPUR (NAWADAH)</option>
+
+<option value="GURAR:GURARU (BIHAR)"> GURARU (BIHAR)</option>
+
+<option value="GURUA:GURUA (DISTT. GAYA, BIHAR)"> GURUA (DISTT. GAYA, BIHAR)</option>
+
+<option value="HAJIP:HAJIPUR (BIHAR)"> HAJIPUR (BIHAR)</option>
+
+<option value="HARN:HARNAUT (NALANDA)"> HARNAUT (NALANDA)</option>
+
+<option value="HASPU:HASPURA, DT AURANGABAD, BIHAR"> HASPURA, DT AURANGABAD, BIHAR</option>
+
+<option value="HAVEL:HAVELI KHARAGPUR, DT MUNGER, BIHAR"> HAVELI KHARAGPUR, DT MUNGER, BIHAR</option>
+
+<option value="HAZIP:HAZIPUR"> HAZIPUR</option>
+
+<option value="HILSA:HILSA (DISTT-NALANDA)"> HILSA (DISTT-NALANDA)</option>
+
+<option value="HISU:HISUA"> HISUA</option>
+
+<option value="HULAS:HULASGANJ BIHAR"> HULASGANJ BIHAR</option>
+
+<option value="IMAM:IMAMGANJ (DISTT-GAYA)"> IMAMGANJ (DISTT-GAYA)</option>
+
+<option value="IMAG:IMAMGANJ (DISTT-PATNA)"> IMAMGANJ (DISTT-PATNA)</option>
+
+<option value="INARW:INARWA (BIHAR)"> INARWA (BIHAR)</option>
+
+<option value="ISLMP:ISLAMPUR"> ISLAMPUR</option>
+
+<option value="ITAMA:ITAMAH (DISTT-ROHTAS) BIHAR"> ITAMAH (DISTT-ROHTAS) BIHAR</option>
+
+<option value="ITWAN:ITWAN, DT GAYA"> ITWAN, DT GAYA</option>
+
+<option value="JAITP:JAITPUR (DISTT. AURANGABAD, BH)"> JAITPUR (DISTT. AURANGABAD, BH)</option>
+
+<option value="JALA:JALALPUR (PATNA)"> JALALPUR (PATNA)</option>
+
+<option value="JAMLP:JAMALPUR"> JAMALPUR</option>
+
+<option value="JAMHA:JAMHAITA, PO FATEHPUR, DISTT GAYA"> JAMHAITA, PO FATEHPUR, DISTT GAYA</option>
+
+<option value="JAMUA:JAMUAWAN, DISTT. GAYA (BIHAR)"> JAMUAWAN, DISTT. GAYA (BIHAR)</option>
+
+<option value="JAMUI:JAMUI , BIHAR"> JAMUI , BIHAR</option>
+
+<option value="JAYNA:JAYNAGAR (DISTT-MADHUBANI)"> JAYNAGAR (DISTT-MADHUBANI)</option>
+
+<option value="JEHAN:JEHANABAD"> JEHANABAD</option>
+
+<option value="JENB:JEHANABAD"> JEHANABAD</option>
+
+<option value="JHANJ:JHANJHARPUR BAZAR (DISTT-MADHUBANI)"> JHANJHARPUR BAZAR (DISTT-MADHUBANI)</option>
+
+<option value="JOGBA:JOGBANI"> JOGBANI</option>
+
+<option value="KAIMU:KAIMUR (BIHAR)"> KAIMUR (BIHAR)</option>
+
+<option value="KALUA:KALUAHI (DISTT-MADHUBANI)"> KALUAHI (DISTT-MADHUBANI)</option>
+
+<option value="KAMTA:KAMTAUL"> KAMTAUL</option>
+
+<option value="KANA:KANAUDI, JEHANABAD, BIHAR"> KANAUDI, JEHANABAD, BIHAR</option>
+
+<option value="KANPA:KANPA, BIHAR"> KANPA, BIHAR</option>
+
+<option value="KARGA:KARGAHAR, BIHAR"> KARGAHAR, BIHAR</option>
+
+<option value="KARWN:KARWANDIA (SASARAM)"> KARWANDIA (SASARAM)</option>
+
+<option value="KATIH:KATIHAR"> KATIHAR</option>
+
+<option value="KATRI:KATRI SARAI (DISTT-NALANDA)"> KATRI SARAI (DISTT-NALANDA)</option>
+
+<option value="KAWAK:KAWAKOLE (NAWADAH)"> KAWAKOLE (NAWADAH)</option>
+
+<option value="KAZIS:KAZISARAI (DISTT. JEHANABAD, BIHAR)"> KAZISARAI (DISTT. JEHANABAD, BIHAR)</option>
+
+<option value="KETAK:KETAKI, DISST. AURANGABAD, BIHAR"> KETAKI, DISST. AURANGABAD, BIHAR</option>
+
+<option value="KHAGA:KHAGARIA"> KHAGARIA</option>
+
+<option value="KHAI:KHAIR KHAN, BIHAR"> KHAIR KHAN, BIHAR</option>
+
+<option value="KHIRU:KHIRUBIGHA (NALANDA)"> KHIRUBIGHA (NALANDA)</option>
+
+<option value="KHIZA:KHIZAR SARAI (DISTT. GAYA, BIHAR)"> KHIZAR SARAI (DISTT. GAYA, BIHAR)</option>
+
+<option value="KHOJP:KHOJPUR, DT MADHUBANI, BIHAR"> KHOJPUR, DT MADHUBANI, BIHAR</option>
+
+<option value="KISHA:KISHANGANJ"> KISHANGANJ</option>
+
+<option value="KISHN:KISHANGANJ (BIHAR)"> KISHANGANJ (BIHAR)</option>
+
+<option value="KOILW:KOILWAR, DISTT BHOJPUR"> KOILWAR, DISTT BHOJPUR</option>
+
+<option value="KONCH:KONCH (BIHAR)"> KONCH (BIHAR)</option>
+
+<option value="KORAR:KORARI BAGHATILA (PATNA)"> KORARI BAGHATILA (PATNA)</option>
+
+<option value="KORI:KORIAYA SULTANPUR"> KORIAYA SULTANPUR</option>
+
+<option value="KOTHI:KOTHIA, DISTT. DARBHANGA"> KOTHIA, DISTT. DARBHANGA</option>
+
+<option value="KRSHN:KRISHNA GARH DT BHOJPUR"> KRISHNA GARH DT BHOJPUR</option>
+
+<option value="KUDRA:KUDRA"> KUDRA</option>
+
+<option value="KULHA:KULHARIA (DISTT. MADHUBANI, BIHAR)"> KULHARIA (DISTT. MADHUBANI, BIHAR)</option>
+
+<option value="KURA:KURAICH"> KURAICH</option>
+
+<option value="KURMA:KURMAWAN, DISTT GAYA, (BIHAR)"> KURMAWAN, DISTT GAYA, (BIHAR)</option>
+
+<option value="KURTH:KURTHA BIHAR"> KURTHA BIHAR</option>
+
+<option value="KUTUM:KUTUMBA,DIST AURANGABAD(BIHAR)"> KUTUMBA,DIST AURANGABAD(BIHAR)</option>
+
+<option value="LARI,:LAARI, DIST. ARWAL (BIHAR)"> LAARI, DIST. ARWAL (BIHAR)</option>
+
+<option value="LACHH:LACHHMINIA, DARBHANGA"> LACHHMINIA, DARBHANGA</option>
+
+<option value="LADAN:LADANIA, DT MADHUBANI, BIHAR"> LADANIA, DT MADHUBANI, BIHAR</option>
+
+<option value="LAKAW:LAKHAWAR (BIHAR)"> LAKHAWAR (BIHAR)</option>
+
+<option value="LAKHI:LAKHISARAI"> LAKHISARAI</option>
+
+<option value="LAKHS:LAKHISARAI (BIHAR)"> LAKHISARAI (BIHAR)</option>
+
+<option value="LALGA:LALGANJ SEHRA (PATNA)"> LALGANJ SEHRA (PATNA)</option>
+
+<option value="LAUKA:LAUKAHA, DT SUPAUL, BIHAR"> LAUKAHA, DT SUPAUL, BIHAR</option>
+
+<option value="MADHE:MADHEPUR, DT MADHUBANI, BIHAR"> MADHEPUR, DT MADHUBANI, BIHAR</option>
+
+<option value="MADHP:MADHEPURA (BIHAR)"> MADHEPURA (BIHAR)</option>
+
+<option value="MADHO:MADHOPUR (SHIVNAGAR, DISTT. MADHUBANI, BH)"> MADHOPUR (SHIVNAGAR, DISTT. MADHUBANI, BH)</option>
+
+<option value="MADHU:MADHUBANI"> MADHUBANI</option>
+
+<option value="MADHW:MADHWAPUR, BIHAR"> MADHWAPUR, BIHAR</option>
+
+<option value="MAHA:MAHABALIPUR (PATNA)"> MAHABALIPUR (PATNA)</option>
+
+<option value="MAHAP:MAHAPUR (NAWADAH)"> MAHAPUR (NAWADAH)</option>
+
+<option value="MAHAR:MAHARAJGANJ"> MAHARAJGANJ</option>
+
+<option value="MAHU:MAHUA SINGH RAE - VAISHALI - BIHAR"> MAHUA SINGH RAE - VAISHALI - BIHAR</option>
+
+<option value="MAIRW:MAIRWA (BIHAR)"> MAIRWA (BIHAR)</option>
+
+<option value="MAKSP:MAKSUDPUR, DT GAYA, BIHAR"> MAKSUDPUR, DT GAYA, BIHAR</option>
+
+<option value="MALAH:MALAHI AKBAR SARAI, VAISHALI, BIHAR"> MALAHI AKBAR SARAI, VAISHALI, BIHAR</option>
+
+<option value="MALHI:MALHIPUR (DISTT. ROHTAS, BH)"> MALHIPUR (DISTT. ROHTAS, BH)</option>
+
+<option value="MALI:MALI, DISTT. AURANGABAD (BIHAR"> MALI, DISTT. AURANGABAD (BIHAR</option>
+
+<option value="MAMAR:MAMARKHABAD (BIHAR)"> MAMARKHABAD (BIHAR)</option>
+
+<option value="MANER:MANER (PATNA)"> MANER (PATNA)</option>
+
+<option value="MANGR:MANGRAUNI (DARBHANGA)"> MANGRAUNI (DARBHANGA)</option>
+
+<option value="MANGU:MANGUAR, DT SAHARSA, BIHAR"> MANGUAR, DT SAHARSA, BIHAR</option>
+
+<option value="MARAC:MARANCHI (PATNA)"> MARANCHI (PATNA)</option>
+
+<option value="MASA:MASAURHA (PATNA)"> MASAURHA (PATNA)</option>
+
+<option value="MASAU:MASAURHI (BIHAR)"> MASAURHI (BIHAR)</option>
+
+<option value="MATH:MATHURAPUR (DISTT-GAYA)"> MATHURAPUR (DISTT-GAYA)</option>
+
+<option value="MEH:MEH (DISTT. AURANGABAD, BIHAR)"> MEH (DISTT. AURANGABAD, BIHAR)</option>
+
+<option value="MEHAN:MEHANDIA,DIST.ARWAL (BIHAR)"> MEHANDIA,DIST.ARWAL (BIHAR)</option>
+
+<option value="MEHSI:MEHSI -BIHAR"> MEHSI -BIHAR</option>
+
+<option value="MODAN:MODANGANJ, DT JEHANABAD, BIHAR"> MODANGANJ, DT JEHANABAD, BIHAR</option>
+
+<option value="MOHAE:MOHAN EGHU (DT-BEGUSARAI)"> MOHAN EGHU (DT-BEGUSARAI)</option>
+
+<option value="MOHA:MOHANPUR RAMGANJ (PATNA)"> MOHANPUR RAMGANJ (PATNA)</option>
+
+<option value="MOHIU:MOHIUDDINPUR, GAYA, BIHAR"> MOHIUDDINPUR, GAYA, BIHAR</option>
+
+<option value="MOKAM:MOKAMAH (DISTT-PATNA)"> MOKAMAH (DISTT-PATNA)</option>
+
+<option value="MOKAR:MOKARI (DISTT. BHABUA, BIHAR)"> MOKARI (DISTT. BHABUA, BIHAR)</option>
+
+<option value="MORSA:MORSAND CHOWK (DISTT. SAMASTIPUR, BIHAR)"> MORSAND CHOWK (DISTT. SAMASTIPUR, BIHAR)</option>
+
+<option value="MOTIH:MOTIHARI"> MOTIHARI</option>
+
+<option value="MUNGE:MUNGER"> MUNGER</option>
+
+<option value="MURGA:MURGAON, GAYA, BIHAR"> MURGAON, GAYA, BIHAR</option>
+
+<option value="MURLI:MURLIPUR, DIST SARAN BIHAR"> MURLIPUR, DIST SARAN BIHAR</option>
+
+<option value="MUZAF:MUZAFFARPUR"> MUZAFFARPUR</option>
+
+<option value="NADIW:NADIAWAN (DISTT-BHAGALPUR)"> NADIAWAN (DISTT-BHAGALPUR)</option>
+
+<option value="NADWA:NADWAN (PATNA)"> NADWAN (PATNA)</option>
+
+<option value="NAGAN:NAGARNAUSA (NALANDA)"> NAGARNAUSA (NALANDA)</option>
+
+<option value="NAGPA:NAGARPARA (DISTT-BHAGALPUR)"> NAGARPARA (DISTT-BHAGALPUR)</option>
+
+<option value="NAGFA:NAGWAN FATEHPUR (DISTT. GAYA, BIHAR)"> NAGWAN FATEHPUR (DISTT. GAYA, BIHAR)</option>
+
+<option value="NAGWA:NAGWAN, IMAMGANJ, DT GAYA"> NAGWAN, IMAMGANJ, DT GAYA</option>
+
+<option value="NAIBA:NAI BAZAR (DISTT. GAYA, BH)"> NAI BAZAR (DISTT. GAYA, BH)</option>
+
+<option value="NALAN:NALANDA"> NALANDA</option>
+
+<option value="NALAN:NALANDA (BIHAR)"> NALANDA (BIHAR)</option>
+
+<option value="NANAU:NANAUTI (DISTT-SAHARSA)"> NANAUTI (DISTT-SAHARSA)</option>
+
+<option value="NAOKO:NAOKOTHI (DISTT. BEGUSARAI, BH)"> NAOKOTHI (DISTT. BEGUSARAI, BH)</option>
+
+<option value="NARDI:NARDIGANJ (NAWADAH)"> NARDIGANJ (NAWADAH)</option>
+
+<option value="NART:NARKATIAGANJ"> NARKATIAGANJ</option>
+
+<option value="NATWA:NATWAR (DISTT-ROHTAS)"> NATWAR (DISTT-ROHTAS)</option>
+
+<option value="NAUGR:NAUGARHI (DISTT. MUNGER) BIHAR"> NAUGARHI (DISTT. MUNGER) BIHAR</option>
+
+<option value="NAWAD:NAWADA"> NAWADA</option>
+
+<option value="NAWAD:NAWADAH"> NAWADAH</option>
+
+<option value="NAWAG:NAWANAGAR, DISTT. BUXOR (BIHAR)"> NAWANAGAR, DISTT. BUXOR (BIHAR)</option>
+
+<option value="NAZAR:NAZARDIH (NAWADAH)"> NAZARDIH (NAWADAH)</option>
+
+<option value="NEHRA:NEHRA, BIHAR"> NEHRA, BIHAR</option>
+
+<option value="NEPUR:NEPURA (DISTT. NALANDA, BIHAR)"> NEPURA (DISTT. NALANDA, BIHAR)</option>
+
+<option value="NEURA:NEURA (BIHAR)"> NEURA (BIHAR)</option>
+
+<option value="NIMI:NIMI, PO FATEHPUR, DISTT GAYA"> NIMI, PO FATEHPUR, DISTT GAYA</option>
+
+<option value="NONHI:NONHI (DISTT. JEHANABAD, BIHAR)"> NONHI (DISTT. JEHANABAD, BIHAR)</option>
+
+<option value="NOORS:NOORSARAI, DISTT. NALANDA (BIHAR)"> NOORSARAI, DISTT. NALANDA (BIHAR)</option>
+
+<option value="OBRA:OBRA (DISTT-AURANGABAD)"> OBRA (DISTT-AURANGABAD)</option>
+
+<option value="ODDAR:ODDAR-BIHAR"> ODDAR-BIHAR</option>
+
+<option value="PABHE:PABHERA (PATNA)"> PABHERA (PATNA)</option>
+
+<option value="PAKR:PAKRIBARAWAN (NAWADAH)"> PAKRIBARAWAN (NAWADAH)</option>
+
+<option value="PALIG:PALIGANJ (BIHAR)"> PALIGANJ (BIHAR)</option>
+
+<option value="PANNI:PANANIA (DISTT. GAYA, BIHAR)"> PANANIA (DISTT. GAYA, BIHAR)</option>
+
+<option value="PAND:PANDARAK (PATNA"> PANDARAK (PATNA</option>
+
+<option value="PANDE:PANDEYPATTI"> PANDEYPATTI</option>
+
+<option value="PARNA:PARNAWADA , BIHAR"> PARNAWADA , BIHAR</option>
+
+<option value="PARSA:PARSA BAZAR, PATNA"> PARSA BAZAR, PATNA</option>
+
+<option value="PASAU:PASAUR (DISTT-BHOJPUR)"> PASAUR (DISTT-BHOJPUR)</option>
+
+<option value="PATNA:PATNA"> PATNA</option>
+
+<option value="PATOO:PATOOT (BIHAR)"> PATOOT (BIHAR)</option>
+
+<option value="PAWA:PAWAPURI"> PAWAPURI</option>
+
+<option value="PHESA:PHESAR, BIHAR"> PHESAR, BIHAR</option>
+
+<option value="PHULP:PHULPARAS"> PHULPARAS</option>
+
+<option value="PIANI:PIANIA (BIHAR)"> PIANIA (BIHAR)</option>
+
+<option value="PIPAR:PIPARIYA"> PIPARIYA</option>
+
+<option value="PIPR:PIPRA (DISTT. GAYA, BIHAR)"> PIPRA (DISTT. GAYA, BIHAR)</option>
+
+<option value="PIRP:PIRPAINTI"> PIRPAINTI</option>
+
+<option value="POKHA:POKHARPUR (DISTT. GAYA, BIHAR)"> POKHARPUR (DISTT. GAYA, BIHAR)</option>
+
+<option value="POTHA:POTHAHI, BIHAR"> POTHAHI, BIHAR</option>
+
+<option value="PUNPU:PUNPUN, DIST PATNA"> PUNPUN, DIST PATNA</option>
+
+<option value="PURA:PURAN (DISTT. ARWAL, BIHAR)"> PURAN (DISTT. ARWAL, BIHAR)</option>
+
+<option value="PURNE:PURNEA"> PURNEA</option>
+
+<option value="PURNI:PURNIA"> PURNIA</option>
+
+<option value="PURNI:PURNIA , BIHAR"> PURNIA , BIHAR</option>
+
+<option value="PUSA:PUSA, SAMASTIPUR, BIHAR"> PUSA, SAMASTIPUR, BIHAR</option>
+
+<option value="RAFIG:RAFIGANJ (DISTT. AURANGABAD)"> RAFIGANJ (DISTT. AURANGABAD)</option>
+
+<option value="RAHAT:RAHATPUR (DISTT. BEGUSARAI, BH)"> RAHATPUR (DISTT. BEGUSARAI, BH)</option>
+
+<option value="RAHUI:RAHUI, DISTT. NALANDA (BIHAR)"> RAHUI, DISTT. NALANDA (BIHAR)</option>
+
+<option value="RAILI:RAILI (DISTT. PATNA)"> RAILI (DISTT. PATNA)</option>
+
+<option value="RAIPC:RAIPUR CHOR (DISTT. ROHTAS, BH)"> RAIPUR CHOR (DISTT. ROHTAS, BH)</option>
+
+<option value="RAJGN:RAJ GANGELI (MAJRA) DISTT-PURNEA"> RAJ GANGELI (MAJRA) DISTT-PURNEA</option>
+
+<option value="RAJAU:RAJAULI"> RAJAULI</option>
+
+<option value="RAJGI:RAJGIR DISTT. NALANDA"> RAJGIR DISTT. NALANDA</option>
+
+<option value="RAJNG:RAJNAGAR (DARBHANGA)"> RAJNAGAR (DARBHANGA)</option>
+
+<option value="RAJ:RAJPUR DISTT -ROHTAS"> RAJPUR DISTT -ROHTAS</option>
+
+<option value="RAMAK:RAMANKABAD, DT MUNGER, BIHAR"> RAMANKABAD, DT MUNGER, BIHAR</option>
+
+<option value="BHABH:RAMPUR (BHABHUA)"> RAMPUR (BHABHUA)</option>
+
+<option value="RAMP:RAMPUR (DISTT. BUXAR, BIHAR)"> RAMPUR (DISTT. BUXAR, BIHAR)</option>
+
+<option value="RAN:RANIGANJ, BIHAR"> RANIGANJ, BIHAR</option>
+
+<option value="RANTI:RANTI , DISTT-MADHUBANI"> RANTI , DISTT-MADHUBANI</option>
+
+<option value="RASUP:RASULPUR VIJAYGOPAL (PATNA)"> RASULPUR VIJAYGOPAL (PATNA)</option>
+
+<option value="RATN:RATANUAN, DISTT AURANGABAD"> RATANUAN, DISTT AURANGABAD</option>
+
+<option value="RATNI:RATNI, DT JEHANABAD, BIHAR"> RATNI, DT JEHANABAD, BIHAR</option>
+
+<option value="RAXUL:RAXAUL (BIHAR)"> RAXAUL (BIHAR)</option>
+
+<option value="RISIA:RISIAP,DIST.AURANGABAD (BIHAR)"> RISIAP,DIST.AURANGABAD (BIHAR)</option>
+
+<option value="ROHTA:ROHTAS"> ROHTAS</option>
+
+<option value="ROHTH:ROHTAS (BIHAR)"> ROHTAS (BIHAR)</option>
+
+<option value="ROUSS:ROUSSERA GHAT (BIHAR)"> ROUSSERA GHAT (BIHAR)</option>
+
+<option value="RUKUN:RUKUNDI (DISTT. AURANGABAD, BH)"> RUKUNDI (DISTT. AURANGABAD, BH)</option>
+
+<option value="RUNNI:RUNNI SAIDPUR"> RUNNI SAIDPUR</option>
+
+<option value="SABNI:SABNIMA (DISTT-PATNA)"> SABNIMA (DISTT-PATNA)</option>
+
+<option value="SABOU:SABOUR (DISTT-BHAGALPUR)"> SABOUR (DISTT-BHAGALPUR)</option>
+
+<option value="SADIS:SADISOPUR (DISTT-PATNA)"> SADISOPUR (DISTT-PATNA)</option>
+
+<option value="SAHAJ:SAHAR, DISTT. BHOJPUR (BIHAR)"> SAHAR, DISTT. BHOJPUR (BIHAR)</option>
+
+<option value="SAHAR:SAHARSA"> SAHARSA</option>
+
+<option value="SAHAR:SAHARSA (BIHAR)"> SAHARSA (BIHAR)</option>
+
+<option value="SAIDP:SAIDPUR SALHA (DT.BEGUSARAI)"> SAIDPUR SALHA (DT.BEGUSARAI)</option>
+
+<option value="SAKAR:SAKARPURA, DARBHANGA"> SAKARPURA, DARBHANGA</option>
+
+<option value="SAKLA:SAKLA BAZAR, DISTT ROHTAS, BIHAR"> SAKLA BAZAR, DISTT ROHTAS, BIHAR</option>
+
+<option value="SAKSO:SAKSOHRA (PATNA)"> SAKSOHRA (PATNA)</option>
+
+<option value="SAKUR:SAKURI"> SAKURI</option>
+
+<option value="SAMAS:SAMASTIPUR"> SAMASTIPUR</option>
+
+<option value="SAMPU:SAMASTIPUR"> SAMASTIPUR</option>
+
+<option value="SAMPA:SAMPATCHAK (PATNA)"> SAMPATCHAK (PATNA)</option>
+
+<option value="SAMYA:SAMYAGARH (PATNA)"> SAMYAGARH (PATNA)</option>
+
+<option value="SANJH:SANJHAULI, DIST. ROHTAS(BIHAR)"> SANJHAULI, DIST. ROHTAS(BIHAR)</option>
+
+<option value="SANKT:SANKATRA (DISTT. KATIHAR, BIHAR)"> SANKATRA (DISTT. KATIHAR, BIHAR)</option>
+
+<option value="SARAN:SARAN (CHAPRA)"> SARAN (CHAPRA)</option>
+
+<option value="SARAR:SARARI (DISTT-SHEIKHPURA)"> SARARI (DISTT-SHEIKHPURA)</option>
+
+<option value="SARME:SARMERA (NALANDA)"> SARMERA (NALANDA)</option>
+
+<option value="SARVA:SARVAN BAZAR (BIHAR)"> SARVAN BAZAR (BIHAR)</option>
+
+<option value="SASAR:SASARAM"> SASARAM</option>
+
+<option value="SATHA:SATHA (BIHAR)"> SATHA (BIHAR)</option>
+
+<option value="SATIG:SATIGHAT (BIHAR)"> SATIGHAT (BIHAR)</option>
+
+<option value="SHAPR:SHAHPUR (DISTT-NAWADA)"> SHAHPUR (DISTT-NAWADA)</option>
+
+<option value="SHAPU:SHAHPUR (DISTT-PATNA)"> SHAHPUR (DISTT-PATNA)</option>
+
+<option value="SHEKH:SHEIKHPURA, BIHAR SHARIF"> SHEIKHPURA, BIHAR SHARIF</option>
+
+<option value="SHEON:SHEOGANJ,DIST.AURANGABAD(BIHAR"> SHEOGANJ,DIST.AURANGABAD(BIHAR</option>
+
+<option value="SHEOH:SHEOHAR (BIHAR)"> SHEOHAR (BIHAR)</option>
+
+<option value="SHERG:SHERGHATI,DIST GAYA (BIHAR)"> SHERGHATI,DIST GAYA (BIHAR)</option>
+
+<option value="SHER:SHERPUR (PATNA)"> SHERPUR (PATNA)</option>
+
+<option value="SIGOR:SIGORI (PATNA)"> SIGORI (PATNA)</option>
+
+<option value="SIJHO:SIJHOURI (JAMUI)"> SIJHOURI (JAMUI)</option>
+
+<option value="SIKAH:SIKARHATA, DISTT. BHOJPUR"> SIKARHATA, DISTT. BHOJPUR</option>
+
+<option value="SILAO:SILAO (NALANDA)"> SILAO (NALANDA)</option>
+
+<option value="SILON:SILONJA"> SILONJA</option>
+
+<option value="SIMRI:SIMRI (DISTT-DARBHANGA)"> SIMRI (DISTT-DARBHANGA)</option>
+
+<option value="SIMRB:SIMRI - B (DISTT-SAHARSA)"> SIMRI - B (DISTT-SAHARSA)</option>
+
+<option value="SIMRN:SIMRI N (DISTT-SUPAUL)"> SIMRI N (DISTT-SUPAUL)</option>
+
+<option value="SINGW:SINGHESHWARASTHAN (MADHEPURA )"> SINGHESHWARASTHAN (MADHEPURA )</option>
+
+<option value="SIRDA:SIRDALA (NAWADAH)"> SIRDALA (NAWADAH)</option>
+
+<option value="SIRDI:SIRDILPUR, DISTT, SAMASTIPUR"> SIRDILPUR, DISTT, SAMASTIPUR</option>
+
+<option value="SITAM:SITAMARHI"> SITAMARHI</option>
+
+<option value="SIUR:SIUR (DISTT-NAWADA)"> SIUR (DISTT-NAWADA)</option>
+
+<option value="SIWAN:SIWAN"> SIWAN</option>
+
+<option value="SOHAN:SOHANA"> SOHANA</option>
+
+<option value="SONER:SONEPUR"> SONEPUR</option>
+
+<option value="SONWA:SONWAN (DISTT. JEHANABAD, BIHAR)"> SONWAN (DISTT. JEHANABAD, BIHAR)</option>
+
+<option value="SUKHI:SUKHIYAWAN, DT JEHANABAD, BIHAR"> SUKHIYAWAN, DT JEHANABAD, BIHAR</option>
+
+<option value="SULTG:SULTANGANJ"> SULTANGANJ</option>
+
+<option value="SUPAU:SUPAUL"> SUPAUL</option>
+
+<option value="SUPAU:SUPAUL, BIHAR"> SUPAUL, BIHAR</option>
+
+<option value="SURAJ:SURAJ MANDAL, DISTT. GAYA (BIHAR)"> SURAJ MANDAL, DISTT. GAYA (BIHAR)</option>
+
+<option value="SURJP:SURAJPURA, DISTT ROHTAS, BIHAR"> SURAJPURA, DISTT ROHTAS, BIHAR</option>
+
+<option value="SURSA:SURSAND ASLI"> SURSAND ASLI</option>
+
+<option value="SURY:SURYAGARHA , DISTT - LAKHISARAI"> SURYAGARHA , DISTT - LAKHISARAI</option>
+
+<option value="TANDW:TANDWA, DT AURANGABAD, BIHAR"> TANDWA, DT AURANGABAD, BIHAR</option>
+
+<option value="TANKU:TANKUPPA, DT GAYA"> TANKUPPA, DT GAYA</option>
+
+<option value="TEKAR:TEKARI (DISTT. GAYA, BIHAR)"> TEKARI (DISTT. GAYA, BIHAR)</option>
+
+<option value="TELHA:TELHARA (NALANDA)"> TELHARA (NALANDA)</option>
+
+<option value="TETRI:TETRI (DISTT-BHAGALPUR)"> TETRI (DISTT-BHAGALPUR)</option>
+
+<option value="TEYAR:TEYAR (NAWADAH)"> TEYAR (NAWADAH)</option>
+
+<option value="THAKU:THAKURAHAT (DISTT. KAIMUR, BH)"> THAKURAHAT (DISTT. KAIMUR, BH)</option>
+
+<option value="THALP:THALPOSE (NAWADAH)"> THALPOSE (NAWADAH)</option>
+
+<option value="THANB:THANA BAHORANPUR(BIHAR)"> THANA BAHORANPUR(BIHAR)</option>
+
+<option value="TILAI:TILAIYA (DISTT. GAYA, BIHAR)"> TILAIYA (DISTT. GAYA, BIHAR)</option>
+
+<option value="TILAK:TILAKPUR (DISTT-LAKHISARAI)"> TILAKPUR (DISTT-LAKHISARAI)</option>
+
+<option value="TILOT:TILOTHU (DISTT-ROHTAS)"> TILOTHU (DISTT-ROHTAS)</option>
+
+<option value="TULSI:TULSIGARH (BIHAR)"> TULSIGARH (BIHAR)</option>
+
+<option value="TURUK:TURUKTELPA (MALI-ARWAL) (BIHAR)"> TURUKTELPA (MALI-ARWAL) (BIHAR)</option>
+
+<option value="UMGAO:UMGAON (DISTT-MADHUBANI)"> UMGAON (DISTT-MADHUBANI)</option>
+
+<option value="UMTA:UMTA (DISTT-JEHANABAD)"> UMTA (DISTT-JEHANABAD)</option>
+
+<option value="UPTHU:UPTHU, DISTT. GAYA (BIHAR)"> UPTHU, DISTT. GAYA (BIHAR)</option>
+
+<option value="USRAO:USRAON (DISTT. ROHTAS, BIHAR)"> USRAON (DISTT. ROHTAS, BIHAR)</option>
+
+<option value="VAISH:VAISHALI"> VAISHALI</option>
+
+<option value="VEER:VEER, DT PATNA, BIHAR"> VEER, DT PATNA, BIHAR</option>
+
+<option value="WAINI:WAINI PUSA ROAD (DISTT. SAMASTIPUR)"> WAINI PUSA ROAD (DISTT. SAMASTIPUR)</option>
+
+<option value="WARSA:WARSALIGANJ"> WARSALIGANJ</option>
+
+<option value="WEST :WEST CHAMPARAN"> WEST CHAMPARAN</option>
+
+<option value="WESTC:WEST CHAMPARAN"> WEST CHAMPARAN</option>
+
+</select>
+
+
+
+
+
+</div>
+                </div>
+                <div class="input-group">
+                    <label>Select Branch<b>*</b></label>
+                    <div id="div_branch">
+
+
+
+
+
+
+
+
+
+
+<select id="drp_branch" name="drp_branch">
+<option value=""> ----Select Branch---- </option>	
+
+
+ </select>
+ 
+
+
+
+</div>
+                </div>
+                <input type="hidden" name="SOL_ID" id="SOL_ID" size="50" autocomplete="off" maxlength="11">
+                <div class="input-group">
+                    <label>Please Select Account Type<b>*</b></label>
+                    <div class="radioblock">
+                            
+                                Domestic <input type="radio" name="ACC_TYPE" id="ACC_TYPE" value="D" checked=""> 
+                                NRI <input type="radio" name="ACC_TYPE" id="ACC_TYPE" value="N"> 
+                                
+                    
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Customer Name<b>*</b></label>
+                    <input autocomplete="off" class="inputfield" type="text" name="username" id="username" value="" onkeypress="return chk1(this)" onkeyup="checkDoubleSpaceUsername()" size="40">
+                </div>
+                <div class="input-group">
+                    <label>Customer Mobile No<b>*</b></label>
+                    <input autocomplete="off" class="inputfield" type="text" name="contactno" id="contactno" value="" maxlength="10" onkeypress="return chk2(this)" onkeyup="checkDoubleSpaceMob()" onblur="checkMobJunk()" size="40">
+                </div>
+                <div class="input-group">
+                    <label>Customer Email ID<b>*</b></label>
+                    <input autocomplete="off" class="inputfield" type="text" name="email" id="email" value="" onkeypress="return chk3(this)" onkeyup="checkDoubleSpaceEmail()" onblur="checkMailJunk()" size="40">
+                </div>
+                
+                <div class="fullwidth">
+                    <input type="checkbox" class="checkboxdiv" name="decA" value="N">Please seed my Aadhaar/UID Number issued by UIDAI.I hereby give my consent to the Bank to use my Aadhaar details to authenticate me from UIDAI by using my biometrics for the purpose of Bank account.
+                </div>	
+                
+                <div class="fullwidth">
+                    <input type="checkbox" class="checkboxdiv" name="decB" value="N">I declare that I am desirous of receiving entitled benefits or subsidies of welfare schemes funded from the Consolidated Fund of India in my account directly.
+                </div>		
+                
+                <div class="input-group">
+                    <label>Captcha Key<b>*</b><br><br>Please enter the security key </label>
+                    <div class="capchablock">
+                    <input autocomplete="off" class="inputfield2" type="text" name="captcha" id="captcha" maxlength="6" title="Enter Security Key">
+                    <img id="securitykey" src="	https://pnbnet.org.in/OOSA/MyCaptcha?0.10921818542877126" border="0">
+                    <input type="button" id="refreshcaptcha" width="30" height="30" onclick="reloadCaptcha();" title="Click to refresh security key">
+                    </div>
+                </div>	
+                    
+                <p>On clicking SUBMIT button, a temporary customer reference number (TCRN) will be generated and will be sent to your email-id as well as mobile number provided.</p>
+                <p>You are requested to enter TCRN number on next page.</p>
+                <div class="btn-group">
+                    <input class="btn" name="submit" type="submit" value="SUBMIT">    	 
+                    <input class="btn btn-reset" name="reset" type="reset" value="RESET"> 
+                </div>	
+        </form></div>
+
+        <!-- footer -->
+        <div class="footer">
+			<div class="custom-container">			
+				<p class="f-left"><strong>Copyright Ⓒ Punjab National Bank</strong></p><strong>				
+			</strong></div><strong>
+	</strong></div>
+
+        <!-- end of footer -->
+
+</body>
+</html>
